@@ -10,10 +10,10 @@ In this challenge you will automate the lights in your house… well, at least i
 ### Lifting State Up
 
 - The count of turned on lights on the home page (`/`) is not working because the state is not shared between the components.
-- To make the state of the `Light` components available to the `HomePage` component (`pages/index.js`), you need to lift the state up to the `App` component (`pages/_app.js`).
-- In doing so, you will need to find a new way to represent the state of the lights. You can use an array of objects with a `name`, `isOn` and `id` property.
-- Change `Light` component to receive at least `isOn`, `name`, `onToggle` as props and remove the internal state from the component.
-- Change the `Lights` component to render the lights dynamically based on the array in state (`.map`). You'll need to pass the array down through props.
+  [x] To make the state of the `Light` components available to the `HomePage` component (`pages/index.js`), you need to lift the state up to the `App` component (`pages/_app.js`).
+  [x] In doing so, you will need to find a new way to represent the state of the lights. You can use an array of objects with a `name`, `isOn` and `id` property.
+  [x] Change `Light` component to receive at least `isOn`, `name`, `onToggle` as props and remove the internal state from the component.
+  [x] Change the `Lights` component to render the lights dynamically based on the array in state (`.map`). You'll need to pass the array down through props.
 - Create a function to toggle the `isOn` property of a light based on its `id` and pass the handler function down to the `Light` components.
 - In the `Lights` component pass down the `onToggle` prop to the `Light` component using an inline function to pass in the `id` of the light:
 
@@ -36,17 +36,18 @@ In this challenge you will automate the lights in your house… well, at least i
 
 ### Creating the Quick Actions
 
-- The buttons on the `/actions` page are also not yet functional.
-- Create two handler functions to toggle all lights on and off.
-- Pass them down to the `QuickActions` component and use them to toggle all lights on and off.
-- Bonus: Make the `Button`s `disabled` if their action would not do anything:
-  - "Turn all lights off" should be disabled if all lights are off
-  - "Turn all lights on" should be disabled if all lights are on
+[x] The buttons on the `/actions` page are also not yet functional.
+[x] Create two handler functions to toggle all lights on and off.
+[x] Pass them down to the `QuickActions` component and use them to toggle all lights on and off.
+
+[x] Bonus: Make the `Button`s `disabled` if their action would not do anything:
+[x] "Turn all lights off" should be disabled if all lights are off
+[x] "Turn all lights on" should be disabled if all lights are on
 
 ### Bonus: Dimming the Background
 
-- The `Layout` component accepts a `isDimmed` prop that can be used to dim the background.
-- Set the `isDimmed` prop to `true` if all lights are turned off. 🌚
+[x] The `Layout` component accepts a `isDimmed` prop that can be used to dim the background.
+[x] Set the `isDimmed` prop to `true` if all lights are turned off. 🌚
 
 ## Notes
 
